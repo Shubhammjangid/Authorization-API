@@ -59,7 +59,7 @@ namespace NS.EMS.LOGINREPO
 
             var token = new JwtSecurityToken(
                 _configuration["Jwt:Issuer"],
-                _configuration["Jwt;Audience"],
+                _configuration["Jwt:Audience"],
                 claims,
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials);
