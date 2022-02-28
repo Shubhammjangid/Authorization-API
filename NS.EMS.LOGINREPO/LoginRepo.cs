@@ -49,7 +49,7 @@ namespace NS.EMS.LOGINREPO
 
         private string GenerateToken(string userName , string role)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Audience"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey,SecurityAlgorithms.HmacSha256);
             var claims = new Claim[]
                 {
