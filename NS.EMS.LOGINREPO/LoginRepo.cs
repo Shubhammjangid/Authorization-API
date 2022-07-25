@@ -34,17 +34,7 @@ namespace NS.EMS.LOGINREPO
                     var token = GenerateToken(user.UserName, user.Role);
                     return token;
                 }
-                
             }
-                
-            
-                
- 
-                
-                
-              
-            
-            
         }
 
         private string GenerateToken(string userName , string role)
